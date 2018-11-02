@@ -31,5 +31,5 @@ In order to answer these research questions, we will be looking at the ***Open F
 - Set up our goals and plans for the next milestone.
 
 # Questions for TAs
-
+- If we use a small portion data from another data-set, should we also reference it? If so, how?
 
