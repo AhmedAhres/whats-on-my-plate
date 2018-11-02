@@ -3,8 +3,10 @@ Analyzing the food impact on the environment and the nutrition score label.
 
 # Abstract
 We are what we eat and the food system drives everything. Nowadays, there are endless range of products being sold in all over the world differing from one country to another. In this sense, different countries have a different impact on their population and on the environment depending on the products being sold and produced.
-The aim of this project is to analyze how these products can have an impact on the daily life of their consumers in terms of healthiness, eco-friendliness as well as production, and whether there is a direct correlation between these categories.
+The aim of this project is to analyze how these products can have an impact on the daily life of their consumers in terms of healthiness, eco-friendliness as well as production. 
+
 Our goal is to understand and explain how the food industry works and how it can influence other aspects such as the environment and the population eating habits.
+In order to accomplish our goal, we will be used a large data-set providing extensive information about a large number of products being sold in supermarkets worldwide.
 
 
 # Research questions
