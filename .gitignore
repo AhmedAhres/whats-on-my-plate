@@ -2,3 +2,4 @@
 .ipynb_checkpoints/
 .~lock.OpenFood.csv#
 OpenFood.csv
+*.pkl
