@@ -46,7 +46,7 @@ In order to answer these research questions, we will be looking at the ***Open F
 
 ## November 18th: 
     - Explore the data available after the cleaning, and analyse the data related to our research questions
-    - Interpreting the preliminary results, and draw hypothesis of why it is the case.
+    - Interpreting the preliminary results, and draw hypothesis related to our research questions.
 
 ## November 25th:
     - Decide on the focus of our projects from the different research question and analysis of the data done so far.
@@ -56,13 +56,13 @@ In order to answer these research questions, we will be looking at the ***Open F
 ## December 2nd:
     - Search for data from other external source that may enhance/confirm our project story and research questions.
     - Explore the possibility to generate more data from the data that we already have linked to our research question.
-    Explore the possibility to predict some features that are missing in our data.
+    - Explore the possibility to predict some features that are missing in our data.
     - Drafting the outline for our report/data story
     - Continiously enhancing our data exploration/analysis/cleaning.
 ## December 9th:
     - Continiously enhancing our data exploration/analysis/cleaning.
     - Finalyzing the report/data story.
-    - Start working the poster and presentating.
+    - Start working on the poster and presentating.
 
 
 # Options to consider:
