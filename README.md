@@ -60,8 +60,8 @@ In order to answer these research questions, we will be looking at the ***Open F
     - Drafting the outline for our report/data story
     - Continiously enhancing our data exploration/analysis/cleaning.
 ## December 9th:
-    - Continiously enhancing our data exploration/analysis/cleaning.
-    - Finalyzing the report/data story.
+    - Continuously enhancing our data exploration/analysis/cleaning.
+    - Finalizing the report/data story.
     - Start working on the poster and presentating.
 
 
