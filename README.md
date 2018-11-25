@@ -17,6 +17,7 @@ We will guide our work with the following questions:
 - Which countries have the largest variety of organic-labeled products?
 - What is the average nutrition score of every product category?
 - What nutrition-related features imply a better nutrition score (or vice-versa)?
+- Given the product and assuming that the ingredients are known, what is the expected nutrition score?
 
 # Datasets
 In order to answer these research questions, we will be looking at the ***Open Food Facts*** database. This dataset provides us with information about the ingredients, category, nutrition score, countries where sold and produced for every product in the supermarkets worldwide. For example, by analyzing where a certain product is produced and sold, we can answer questions regarding trading between the different countries. Moreover, we will be using the data-set containing for the geographical position of the center of each country. The data-set was taken from the following link: https://developers.google.com/public-data/docs/canonical/countries_csv?fbclid=IwAR11sd1ArI7yBbHAJvsvNCUmOaxdwf__o5bd1w8RepWD47NrVO30vN8Ka_0
