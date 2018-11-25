@@ -19,7 +19,7 @@ We will guide our work with the following questions:
 - What nutrition-related features imply a better nutrition score (or vice-versa)?
 
 # Datasets
-In order to answer these research questions, we will be looking at the ***Open Food Facts*** database. This dataset provides us with information about the ingredients, category, nutrition score, countries where sold and produced for every product in the supermarkets worldwide. For example, by analyzing where a certain product is produced and sold, we can answer questions regarding trading between the different countries. Moreover, we will be using the data-set containing for each country the geographical position of its capital city. The data-set was taken from the following link: https://developers.google.com/public-data/docs/canonical/countries_csv?fbclid=IwAR11sd1ArI7yBbHAJvsvNCUmOaxdwf__o5bd1w8RepWD47NrVO30vN8Ka_0
+In order to answer these research questions, we will be looking at the ***Open Food Facts*** database. This dataset provides us with information about the ingredients, category, nutrition score, countries where sold and produced for every product in the supermarkets worldwide. For example, by analyzing where a certain product is produced and sold, we can answer questions regarding trading between the different countries. Moreover, we will be using the data-set containing for the geographical position of the center of each country. The data-set was taken from the following link: https://developers.google.com/public-data/docs/canonical/countries_csv?fbclid=IwAR11sd1ArI7yBbHAJvsvNCUmOaxdwf__o5bd1w8RepWD47NrVO30vN8Ka_0
 
 # A list of internal milestones up until project milestone 2
 - Understand how to deal with large amount of data (1.7 GB)
