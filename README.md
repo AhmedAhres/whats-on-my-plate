@@ -41,7 +41,6 @@ In order to answer these research questions, we will be looking at the ***Open F
     - Skim over the structure of the data provided by openfoodfacts.org and the official description on their website
     - Come up with research questions related to our data set of choice
 
-
 ## November 11th:
     - Cleaning the openfoodfacts dataset i.e., deleting the unnecessary columns for out research questions and replacing NaN
 
