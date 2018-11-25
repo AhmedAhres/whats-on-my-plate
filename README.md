@@ -13,13 +13,13 @@ In order to accomplish our goal, we will be used a large data-set providing exte
 We will guide our work with the following questions:
 
 - What is the proportion of imported/exported products per country?
-- Which countries sell the highest variety of eco-friendly products in terms of packaging and CO2 footprint?
+- Which countries sell the highest variety of eco-friendly products in terms of packaging?
 - Which countries have the largest variety of organic-labeled products?
 - What is the average nutrition score of every product category?
-- What ingredients imply a better nutrition score (or vice-versa)?
+- What nutrition-related features imply a better nutrition score (or vice-versa)?
 
-# Dataset
-In order to answer these research questions, we will be looking at the ***Open Food Facts*** database. This dataset provides us with information about the ingredients, category, nutrition score, countries where sold and produced for every product in the supermarkets worldwide. For example, by analyzing where a certain product is produced and sold, we can answer questions regarding trading between the different countries. 
+# Datasets
+In order to answer these research questions, we will be looking at the ***Open Food Facts*** database. This dataset provides us with information about the ingredients, category, nutrition score, countries where sold and produced for every product in the supermarkets worldwide. For example, by analyzing where a certain product is produced and sold, we can answer questions regarding trading between the different countries. Moreover, we will be using the data-set containing for each country the geographical position of its capital city. The data-set was taken from the following link: https://developers.google.com/public-data/docs/canonical/countries_csv?fbclid=IwAR11sd1ArI7yBbHAJvsvNCUmOaxdwf__o5bd1w8RepWD47NrVO30vN8Ka_0
 
 # A list of internal milestones up until project milestone 2
 - Understand how to deal with large amount of data (1.7 GB)
@@ -54,20 +54,21 @@ In order to answer these research questions, we will be looking at the ***Open F
     - Set up our goals and plans for the next milestone.
 
 ## December 2nd:
-    - Search for data from other external source that may enhance/confirm our project story and research questions.
     - Explore the possibility to generate more data from the data that we already have linked to our research question.
     - Explore the possibility to predict some features that are missing in our data.
     - Drafting the outline for our report/data story
-    - Continiously enhancing our data exploration/analysis/cleaning.
+    - Continuously enhancing our data exploration/analysis/cleaning.
+    - Start working on answering our research questions
+    
 ## December 9th:
     - Continuously enhancing our data exploration/analysis/cleaning.
-    - Finalizing the report/data story.
+    - Work on the report/data story.
     - Start working on the poster and presentation.
-
+    
+## December 16th:
+    - Finalize the project and the report
 
 # Options to consider:
 Enhance our data with more external sources of data.
 
 # Questions for TAs
-- If we use a small portion data from another data-set, should we also reference it? If so, how?
-
