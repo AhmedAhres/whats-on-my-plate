@@ -62,7 +62,7 @@ In order to answer these research questions, we will be looking at the ***Open F
 ## December 9th:
     - Continuously enhancing our data exploration/analysis/cleaning.
     - Finalizing the report/data story.
-    - Start working on the poster and presentating.
+    - Start working on the poster and presentation.
 
 
 # Options to consider:
