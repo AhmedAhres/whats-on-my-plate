@@ -63,10 +63,10 @@ In order to answer these research questions, we will be looking at the ***Open F
 ## December 9th:
     - Continuously enhancing our data exploration/analysis/cleaning.
     - Work on the report/data story.
-    - Start working on the poster and presentation.
     
 ## December 16th:
-    - Finalize the project and the report
+    - Finalize the project and the report.
+    - Start working on the poster and presentation.
 
 # Options to consider:
 Enhance our data with more external sources of data.
