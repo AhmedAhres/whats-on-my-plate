@@ -10,7 +10,7 @@
                       contains information about more than 600,000 products worldwide, going from general information
                       such as the manufacturing country to more specific data such as the ingredients they contain. This dataset
                       contains enough information to be able to analyze not only how nutrition scores are given to products
-                      and quantify the eco-friendliness of each country.
+                      but also quantify the eco-friendliness of each country from their sold products. <br>
                     </p>
                 </div>
             </div>
@@ -22,6 +22,17 @@
                 <div class="col-lg-12 text-center">
                     <h2>Data Exploration</h2>
                     <hr class="star-primary">
+                    <p> An initial look at the dataset showed us that there are 699,124 rows for each product and 173 columns representing different
+                    information that exist for a specific product. While this may seem like a very large number of information,
+                    it also contains a high number of missing values (NaN).
+                    An example is shown in the following figure, where the percentage of values that are not missing for some columns is shown:</p>
+                    <img class="img-responsive" src="img/non-nan.png" alt="">
+                    <p> We notice that some features such as <i> origins_tags </i> has mostly missing data and would therefore not be very helpful in
+                    our analysis. Even though this problem is generalized to more than one feature, our research questions are mainly centered around
+                    the topics of nutrition score and eco-friendliness. As a result, we were able to remove 116 features making the dataset
+                    more lightweight and easier to analyze. <br>
+                    One of the most fundamental aspects of our research relies on countries. Let us analyze the distribution of countries where
+                    the products are sold:</p>
                 </div>
             </div>
         </div>
@@ -32,7 +43,64 @@
                 <div class="col-lg-12 text-center">
                     <h2>Food Industry Analysis</h2>
                     <hr class="star-primary">
+                    <p> After an extensive analysis and cleaning of the provided dataset, we have started a detailed study of the nutrition score
+                    and eco-friendliness topics. Our research endavors have resulted in interesting findings that will be discussed
+                    in this section. </p>
                 </div>
             </div>
         </div>
     </section>
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>What is the proportion of imported/exported products per country?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Which countries sell the highest variety of eco-friendly products in terms of packaging?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Which countries have the largest variety of organic-labeled products?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>What nutrition-related features imply a better nutrition score (or vice-versa)?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Given the product and assuming that the ingredients are known, what is the expected nutrition score?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </subsection>
