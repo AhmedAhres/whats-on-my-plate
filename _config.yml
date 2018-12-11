@@ -1,8 +1,8 @@
 # Site settings
 title: What's On My Plate?
 email: ahmedahres98@gmail.com
-production_url : http://AhmedAhres.github.io/whats-on-my-plate/whats-on-my-plate-story
-BASE_PATH : http://AhmedAhres.github.io/whats-on-my-plate/whats-on-my-plate-story
+url : https://ahmedahres.github.io/whats-on-my-plate/
+baseurl: ""
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 meta_author: Ahmed Ahres
 
