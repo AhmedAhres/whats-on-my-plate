@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Project 2</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+    <meta name="keywords" content="" />
+    <meta name="author" content="LastName FirstName">
+    <link rel="canonical" href="http://localhost:4000/web%20development/2014/07/17/project-2/">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Google verification -->
+    
+
+    <!-- Bing Verification -->
+    
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+    <body id="page-top" class="index">
+       <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">What's On My Plate?</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#introduction">Introduction</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#analysis">Data Exploration & Cleaning</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#conclusions1">Food Industry Analysis</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+        <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/cartoon.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">What's On My Plate?</span>
+                        <hr class="star-light">
+                        <span class="skills">An Analysis of the Food Industry and its Eco-Friendliness</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- Portfolio Grid Section -->
+    <section id="introduction">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Introduction</h2>
+                    <hr class="star-primary">
+                    <p> Open Food Facts is a food products database maintained by thousands of volunteers worlwide. The dataset
+                      contains information about more than 600,000 products worldwide, going from general information
+                      such as the manufacturing country to more specific data such as the ingredients contained. This dataset
+                      contains enough information to be able to analyze not only how nutrition scores are given to products
+                      but also quantify the eco-friendliness of each country from their sold products. <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="analysis">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Data Exploration & Cleaning</h2>
+                    <hr class="star-primary">
+                    <p> An initial look at the dataset showed us that there are 699,124 rows for each product and 173 columns representing different
+                    information that exist for a specific product. While this may seem like a very large number of information,
+                    it also contains a high number of missing values (NaN).
+                    An example is shown in the following figure, where the percentage of values that are <b> not </b> missing for some columns is shown:</p> <br>
+                    <img class="img-responsive" src="img/non-nan.png" alt=""> <br> <br>
+                    <p> We notice that some features such as <i> origins_tags </i> have mostly missing data and would therefore not be very helpful in
+                    our analysis. This problem is not specific to only one column, but is the case for more features. <br>
+                    However, since our research questions are mainly centered around the topics of nutrition score and eco-friendliness,
+                    we were able to remove 116 features making the dataset more lightweight and easier to analyze. For example,
+                    columns containing the URL for the image of the product is not relevant to our research. Additionally,
+                    some columns were very similar. An example is shown in the following image: </p>
+                    <img class="image-text" src="img/labels.png" alt=""> <br> <br>
+                    <p> In this situation, we have manually looked at the columns to select the ones that have more consistent values, i.e.
+                    values in the same language and without typos. After removing all these columns, we were left with 57 features in total. <br>
+                    One of the most fundamental aspects of our research relies on <b> countries </b>. More specifically,
+                    this dataset seprates countries in two categories: those where the product is sold and those where
+                    the product is manufactured. We are mostly interested in the countries of sold products.
+                    The columns related to this data have nearly no missing values, which is extremely helpful for our analysis.
+                    In this snese, we have looked at the distribution of the top 10 countries in the dataset to have an idea about
+                    the location where the products are mainly sold.</p> <br>
+                    <img class="image-text" src="img/countries.png" alt=""> <br> <br>
+                    <p> We notice that France has by far the largest number of elements in the dataset, with over 60% of the total products.
+                      in the dataset, followed by the United States. In fact, these two countries alone represent 86% of countries where the products
+                      are sold in the dataset. <br> <br>
+                      Another important aspect of our research is the <b> nutrition score computation </b>. The dataset provides two types of grading
+                      namely UK and French nutrition scores. However, a closer look at the dataset showed that these two columns
+                      are very similar:
+                      <img class="image-text" src="img/similarity.png" alt=""> <br> <br>
+                      In fact, these two features are 93.1% similar. As a result, our research can be centered around only one of the nutrition scores. <br> <br>
+                      Finally, <b> eco-friendliness </b> is one other extremely relevant area we are exploring. There are two features that are related
+                      to this topic, namely <b> carbon footprint </b> and <b> packaging type </b>. Carbon footprint represents the amount of carbon dioxide
+                      released into the atmosphere and the packaging type is simply the packaging in which a given product is sold in.
+                      The following image shows a closer look at both these columns: <br> <br>
+                      <img class="image-text" src="img/eco.png" alt=""> <br> <br>
+                      We notice that the carbon footprint column has a large number of NaN values. Unfortunately, our analysis has shown that
+                      this feature has only 344 values out of all of the products, meaning that it cannot be very helpful. On the other hand, the packaging
+                      type is present for more than 140,000 products. Thus, the eco-friendliness topic will be mainly based on the packaging type. <br> <br>
+                      In conclusion, the data exploration and cleaning has shown us that: </p>
+                      <p>
+                      <ul class="list">
+                        <li>This dataset contains a very large number of missing values.</li>
+                        <li>The majority of the features are not relevant for our research topics.</li>
+                        <li>Most of the products in the dataset are sold in two countries: France and United States.</li>
+                        <li>We can focus on only one of the nutrition scores.</li>
+                        <li>We will only focus on the packaging type for the eco-friendliness aspect since carbon footprint has very few helpful values.</li>
+                      </ul>
+                      </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="conclusions1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Food Industry Analysis</h2>
+                    <hr class="star-primary">
+                    <p> After an extensive analysis and cleaning of the provided dataset, we have started a detailed study of the nutrition score
+                    and eco-friendliness topics. Our research endavors have resulted in interesting findings that will be discussed
+                    in this section. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>What is the proportion of imported/exported products per country?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Which countries sell the highest variety of eco-friendly products in terms of packaging?</h2>
+                    <hr class="star-primary">
+                    <p class=list>
+                    Product packaging is a complex process. When manufacturers of consumer goods select the types of materials to use in order to package their products,
+                    they are faced with a dilemma. And some of the challenges cannot be solved without sacrificing other elements of the packaging process. For instance, the ideal solution is a light and convenient package for consumer use,
+                    easy to ship and store on the shelves, and <b> eco-friendly </b>. Unfortunately, the usual situation is that a packaging solution can only accomplish two of these goals.
+                    One challenge with answering this research question is <b> quantifying eco-friendliness </b>. Indeed, no research or guidelines
+                    give a specific grade for a certain package on how eco-friendly it is. However, research has been done on which packages
+                    are more eco-friendly than others. Online resources such as [1] give an accurate comparison between the different types of packaging. <br>
+                    The principal types are: </p>
+                    <ul class="list">
+                      <li>Plastic</li>
+                      <li>Cardboard</li>
+                      <li>Paper</li>
+                      <li>Glass</li>
+                      <li>Aluminum</li>
+                      <li>Metal</li>
+                    </ul>
+                    <p class=list> Resources have shown that cardboard and paper are very eco-friendly packaging types, while (non-recyclable) plastic is not.
+                    Moreover, glass is considered as an eco-friendly package, though not as much as cardboard or paper.
+                    As a result, we have decided to quantify these types based on comparison, and have given each packaging a certain score, where
+                    the higher the grade is the more eco-friendly it is.  </p>
+                    <ul class="list">
+                      <li>Cardboard: 60</li>
+                      <li>Paper: 50</li>
+                      <li>Glass: 40</li>
+                      <li>Metal: 30</li>
+                      <li>Aluminum: 20</li>
+                      <li>Plastic: 10</li>
+                    </ul>
+                    <p class="list"> By quantifying them on the basis of comparison, we can have an idea of which countries are the most eco-friendly and who are the least. <br>
+                    The results are: </p>
+                    <div class="row">
+                   <div class="column">
+                     <img src="img/top10.png" style="width:100%">
+                   </div>
+                   <div class="column">
+                     <img src="img/bottom10.png"alt="Forest" style="width:100%">
+                   </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Which countries have the largest variety of organic-labeled products?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>What nutrition-related features imply a better nutrition score (or vice-versa)?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Given the product and assuming that the ingredients are known, what is the expected nutrition score?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>References</h2>
+                    <hr class="star-primary">
+                    <p class="list"> [1] https://greenliving.lovetoknow.com/Biodegradable_and_Recyclable_Packaging_Material <br> </p>
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+
+        <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>Lausanne, <br>
+		                       Switzerland
+                        </p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Project Course</h3>
+                        <p> CS401 - Applied Data Analysis <br>
+                            EPFL</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Authors</h3>
+                        <p>Ahmed Ahres <br>
+                           Ali El Abridi <br>
+                           Mathias Goncalves
+                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+     <!-- jQuery Version 1.11.0 -->
+    <script src="/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/js/jquery.easing.min.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="/js/jqBootstrapValidation.js"></script>
+    
+     <script src="/js/contact_me.js"></script>
+    
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/freelancer.js"></script>
+
+    
+
+    </body>
+</html>
