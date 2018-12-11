@@ -8,7 +8,7 @@
                     <hr class="star-primary">
                     <p> Open Food Facts is a food products database maintained by thousands of volunteers worlwide. The dataset
                       contains information about more than 600,000 products worldwide, going from general information
-                      such as the manufacturing country to more specific data such as the ingredients they contain. This dataset
+                      such as the manufacturing country to more specific data such as the ingredients contained. This dataset
                       contains enough information to be able to analyze not only how nutrition scores are given to products
                       but also quantify the eco-friendliness of each country from their sold products. <br>
                     </p>
@@ -20,24 +20,60 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Data Exploration</h2>
+                    <h2>Data Exploration & Cleaning</h2>
                     <hr class="star-primary">
                     <p> An initial look at the dataset showed us that there are 699,124 rows for each product and 173 columns representing different
                     information that exist for a specific product. While this may seem like a very large number of information,
                     it also contains a high number of missing values (NaN).
-                    An example is shown in the following figure, where the percentage of values that are not missing for some columns is shown:</p>
-                    <img class="img-responsive" src="img/non-nan.png" alt="">
-                    <p> We notice that some features such as <i> origins_tags </i> has mostly missing data and would therefore not be very helpful in
-                    our analysis. Even though this problem is generalized to more than one feature, our research questions are mainly centered around
-                    the topics of nutrition score and eco-friendliness. As a result, we were able to remove 116 features making the dataset
-                    more lightweight and easier to analyze. <br>
-                    One of the most fundamental aspects of our research relies on countries. Let us analyze the distribution of countries where
-                    the products are sold:</p>
+                    An example is shown in the following figure, where the percentage of values that are <b> not </b> missing for some columns is shown:</p> <br>
+                    <img class="img-responsive" src="img/non-nan.png" alt=""> <br> <br>
+                    <p> We notice that some features such as <i> origins_tags </i> have mostly missing data and would therefore not be very helpful in
+                    our analysis. This problem is not specific to only one column, but is the case for more features. <br>
+                    However, since our research questions are mainly centered around the topics of nutrition score and eco-friendliness,
+                    we were able to remove 116 features making the dataset more lightweight and easier to analyze. For example,
+                    columns containing the URL for the image of the product is not relevant to our research. Additionally,
+                    some columns were very similar. An example is shown in the following image: </p>
+                    <img class="image-text" src="img/labels.png" alt=""> <br> <br>
+                    <p> In this situation, we have manually looked at the columns to select the ones that have more consistent values, i.e.
+                    values in the same language and without typos. After removing all these columns, we were left with 57 features in total. <br>
+                    One of the most fundamental aspects of our research relies on <b> countries </b>. More specifically,
+                    this dataset seprates countries in two categories: those where the product is sold and those where
+                    the product is manufactured. We are mostly interested in the countries of sold products.
+                    The columns related to this data have nearly no missing values, which is extremely helpful for our analysis.
+                    In this snese, we have looked at the distribution of the top 10 countries in the dataset to have an idea about
+                    the location where the products are mainly sold.</p> <br>
+                    <img class="image-text" src="img/countries.png" alt=""> <br> <br>
+                    <p> We notice that France has by far the largest number of elements in the dataset, with over 60% of the total products.
+                      in the dataset, followed by the United States. In fact, these two countries alone represent 86% of countries where the products
+                      are sold in the dataset. <br> <br>
+                      Another important aspect of our research is the <b> nutrition score computation </b>. The dataset provides two types of grading
+                      namely UK and French nutrition scores. However, a closer look at the dataset showed that these two columns
+                      are very similar:
+                      <img class="image-text" src="img/similarity.png" alt=""> <br> <br>
+                      In fact, these two features are 93.1% similar. As a result, our research can be centered around only one of the nutrition scores. <br> <br>
+                      Finally, <b> eco-friendliness </b> is one other extremely relevant area we are exploring. There are two features that are related
+                      to this topic, namely <b> carbon footprint </b> and <b> packaging type </b>. Carbon footprint represents the amount of carbon dioxide
+                      released into the atmosphere and the packaging type is simply the packaging in which a given product is sold in.
+                      The following image shows a closer look at both these columns: <br> <br>
+                      <img class="image-text" src="img/eco.png" alt=""> <br> <br>
+                      We notice that the carbon footprint column has a large number of NaN values. Unfortunately, our analysis has shown that
+                      this feature has only 344 values out of all of the products, meaning that it cannot be very helpful. On the other hand, the packaging
+                      type is present for more than 140,000 products. Thus, the eco-friendliness topic will be mainly based on the packaging type. <br> <br>
+                      In conclusion, the data exploration and cleaning has shown us that: </p>
+                      <p>
+                      <ul class="list">
+                        <li>This dataset contains a very large number of missing values.</li>
+                        <li>The majority of the features are not relevant for our research topics.</li>
+                        <li>Most of the products in the dataset are sold in two countries: France and United States.</li>
+                        <li>We can focus on only one of the nutrition scores.</li>
+                        <li>We will only focus on the packaging type for the eco-friendliness aspect since carbon footprint has very few helpful values.</li>
+                      </ul>
+                      </p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="conclusions">
+    <section id="conclusions1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -67,6 +103,44 @@
                 <div class="col-lg-12 text-center">
                     <h2>Which countries sell the highest variety of eco-friendly products in terms of packaging?</h2>
                     <hr class="star-primary">
+                    <p class=list>
+                    Product packaging is a complex process. When manufacturers of consumer goods select the types of materials to use in order to package their products,
+                    they are faced with a dilemma. And some of the challenges cannot be solved without sacrificing other elements of the packaging process. For instance, the ideal solution is a light and convenient package for consumer use,
+                    easy to ship and store on the shelves, and <b> eco-friendly </b>. Unfortunately, the usual situation is that a packaging solution can only accomplish two of these goals.
+                    One challenge with answering this research question is <b> quantifying eco-friendliness </b>. Indeed, no research or guidelines
+                    give a specific grade for a certain package on how eco-friendly it is. However, research has been done on which packages
+                    are more eco-friendly than others. Online resources such as [1] give an accurate comparison between the different types of packaging. <br>
+                    The principal types are: </p>
+                    <ul class="list">
+                      <li>Plastic</li>
+                      <li>Cardboard</li>
+                      <li>Paper</li>
+                      <li>Glass</li>
+                      <li>Aluminum</li>
+                      <li>Metal</li>
+                    </ul>
+                    <p class=list> Resources have shown that cardboard and paper are very eco-friendly packaging types, while (non-recyclable) plastic is not.
+                    Moreover, glass is considered as an eco-friendly package, though not as much as cardboard or paper.
+                    As a result, we have decided to quantify these types based on comparison, and have given each packaging a certain score, where
+                    the higher the grade is the more eco-friendly it is.  </p>
+                    <ul class="list">
+                      <li>Cardboard: 60</li>
+                      <li>Paper: 50</li>
+                      <li>Glass: 40</li>
+                      <li>Metal: 30</li>
+                      <li>Aluminum: 20</li>
+                      <li>Plastic: 10</li>
+                    </ul>
+                    <p class="list"> By quantifying them on the basis of comparison, we can have an idea of which countries are the most eco-friendly and who are the least. <br>
+                    The results are: </p>
+                    <div class="row">
+                   <div class="column">
+                     <img src="img/top10.png" style="width:100%">
+                   </div>
+                   <div class="column">
+                     <img src="img/bottom10.png"alt="Forest" style="width:100%">
+                   </div>
+                  </div>
                 </div>
             </div>
         </div>
@@ -100,6 +174,18 @@
                 <div class="col-lg-12 text-center">
                     <h2>Given the product and assuming that the ingredients are known, what is the expected nutrition score?</h2>
                     <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </subsection>
+
+    <subsection id="conclusions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>References</h2>
+                    <hr class="star-primary">
+                    <p class="list"> [1] https://greenliving.lovetoknow.com/Biodegradable_and_Recyclable_Packaging_Material <br> </p>
                 </div>
             </div>
         </div>
