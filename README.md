@@ -6,7 +6,7 @@ We are what we eat and the food system drives everything. Nowadays, there are en
 The aim of this project is to analyze what we eat depending on where we live.
 
 Our goal is to collect data on the origin, eco-friendliness and healthiness to show what we eat in different countries. 
-Through our analysis, we hope to give more information to the user about what he/she eats depending on the country where he/she lives. 
+Through our analysis, we hope to give more information to the user about what he/she eats depending on the country where he/she lives.  
 
 # Data Story
 The data story can be found in https://ahmedahres.github.io/whats-on-my-plate/
@@ -23,7 +23,7 @@ These questions will then be used to answer the question stated in the title:
 
 - What's on my plate?
 
-The aim is to provide, depending on the country the user lives in, data about the origin and characteristics of the food he/she eats.
+The aim is to provide, depending on the country the user lives in, data about the origin and characteristics of the food he/she eats. It can also be interesting for the user to see information about his/her country of origin (in case the user lives in a different country).
 
 # Datasets
 In order to answer these research questions, we will be looking at the ***Open Food Facts*** database. This dataset provides us with information about the ingredients, category, nutrition score, countries where sold and produced for every product in the supermarkets worldwide. For example, by analyzing where a certain product is produced and sold, we can answer questions regarding trading between the different countries. Moreover, we will be using the data-set containing for the geographical position of the center of each country. The data-set was taken from the following link: https://developers.google.com/public-data/docs/canonical/countries_csv?fbclid=IwAR11sd1ArI7yBbHAJvsvNCUmOaxdwf__o5bd1w8RepWD47NrVO30vN8Ka_0
