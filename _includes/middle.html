@@ -7,7 +7,7 @@
                     <h2>Introduction</h2>
                     <hr class="star-primary">
                     <p> Open Food Facts is a food products database maintained by thousands of volunteers worlwide. The dataset
-                      contains information about more than 600,000 products worldwide, going from general information
+                      contains information about more than 700,000 products worldwide, going from general information
                       such as the manufacturing country to more specific data such as the ingredients contained. This dataset
                       contains enough information to be able to investigate several characteristics of the food industry. <br> <br>
                       <b> We aim to examine the eco-friendliness, origin and nutrition score of the products in order
@@ -23,12 +23,12 @@
                 <div class="col-lg-12 text-center">
                     <h2>Data Exploration & Cleaning</h2>
                     <hr class="star-primary">
-                    <p> An initial look at the dataset showed us that there are 699,124 rows (one per product) and 173 columns representing different
+                    <p> An initial look at the dataset showed us that there are 709,594 rows (one per product) and 173 columns representing different
                     information that exist for a specific product. While this may seem like a very large number of information,
                     it also contains a high number of missing values (NaN).
                     An example is shown in the following figure, where the percentage of values that are <b> not </b> missing for some columns is shown:</p> <br>
                     <img class="img-responsive" src="img/non-nan.png" alt=""> <br> <br>
-                    <p> We notice that some features such as <i> origins_tags </i> have mostly missing data and would therefore not be very helpful in
+                    <p> We notice that some features such as <i> ingredients_from_palm_oil_tags </i> have mostly missing data and would therefore not be very helpful in
                     our analysis. This problem is not specific to only one column, but is the case for more features. <br>
                     However, since our research questions are mainly centered around the topics of nutrition score and eco-friendliness,
                     we were able to remove 116 features making the dataset more lightweight and easier to analyze. For example,
@@ -38,21 +38,26 @@
                     <p> In this situation, we have manually looked at the columns to select the ones that have more consistent values, i.e.
                     values in the same language and without typos. After removing all these columns, we were left with 57 features in total. <br>
                     One of the most fundamental aspects of our research relies on <b> countries </b>. More specifically,
-                    this dataset seprates countries in two categories: those where the product is sold and those where
-                    the product is manufactured. We are mostly interested in the countries of sold products.
-                    The columns related to this data have nearly no missing values, which is extremely helpful for our analysis.
-                    In this snese, we have looked at the distribution of the top 10 countries in the dataset to have an idea about
-                    the location where the products are mainly sold.</p> <br>
+                    this dataset separates countries in two categories: those where the product is sold and those where the product is manufactured.
+                    The columns related to the countries where products are sold have nearly no missing values, which is extremely helpful for our analysis.
+                    On the other hand, the data concerning countries was extremely messy. More specifically, some countries are written in different
+                    languages and/or different ways such as "Frankreich" and "Frankrike" both representing the country of France.
+                    On top of this issue, values not representing countries were part of this feature such as "European union"
+                    or even "Global market". Hence, we have proceded in heavy data cleaning for this part.
+                    After successfully cleaning the data, we have looked at the distribution of the top 10 countries in the dataset to have an idea about
+                    the location where the products in this dataset are mainly sold.</p> <br>
                     <img class="image-text" src="img/countries.png" alt=""> <br> <br>
-                    <p> We notice that France has by far the largest number of elements in the dataset, with over 60% of the total products.
+                    <p> We notice that France has by far the largest number of elements in the dataset, with over 60% of the total products
                       in the dataset, followed by the United States. In fact, these two countries alone represent 86% of countries where the products
                       are sold in the dataset. <br> <br>
+                      We have also examined the distribution of the countries where products mostly come from (their origins), resulting in the following:
+                      <img class="image-text" src="img/countries.png" alt=""> <br> <br>
                       Another important aspect of our research is the <b> nutrition score computation </b>. The dataset provides two types of grading
-                      namely UK and French nutrition scores. However, a closer look at the dataset showed that these two columns
-                      are very similar:
+                      namely British and French nutrition scores. The nutrition score is computed using the ingredients of the product (more details in the next section).
+                      However, a closer look at the dataset showed that these two columns are actually very similar:
                       <img class="image-text" src="img/similarity.png" alt=""> <br> <br>
-                      In fact, these two features are 93.1% similar. This does make sense since the way they are computed is very similar.
-                      As a result of this feature, our research can be centered around only one of the nutrition scores. <br> <br>
+                      In fact, these two features are 93.3% identical. This does make sense since the way they are computed is very similar.
+                      As a result of this analysis, our research can be centered around only one of the nutrition scores. <br> <br>
                       Finally, <b> eco-friendliness </b> is one other extremely relevant area we are exploring. There are two features that are related
                       to this topic, namely <b> carbon footprint </b> and <b> packaging type </b>. Carbon footprint represents the amount of carbon dioxide
                       released into the atmosphere and the packaging type is simply the packaging in which a given product is sold in.
@@ -61,7 +66,7 @@
                       We notice that the carbon footprint column has a large number of NaN values. Unfortunately, our analysis has shown that
                       this feature has only 344 values out of all of the products, meaning that it cannot be very helpful. On the other hand, the packaging
                       type is present for more than 140,000 products. Thus, the eco-friendliness topic will be mainly based on the packaging type. <br> <br>
-                      In conclusion, the data exploration and cleaning has shown us that: </p>
+                      In conclusion for this section, the data exploration and cleaning has shown us that: </p>
                       <p>
                       <ul class="list">
                         <li>This dataset contains a very large number of missing values.</li>
@@ -185,9 +190,9 @@
                 in certain way the lower the score is, the more the product contains healthy ingredients and less unhealthy ingredients.
                 In a sense, this score represents how healthy a product is. Details on how it is calculated is shown in [3]. <br>
                 In the aim of computing how "healthy" our plate is, we have computed the average nutrition score per country.
-                As stated earlier, since the French and British nutrition score are very similar (93.1%, same number of products), we have
+                As stated earlier, since the French and British nutrition score are very similar (93.3%, same number of products), we have
                 arbitrarily decided to only use the British score as a reference. However, the French nutrition score could have also been used.
-                An image of the result is shown below, keeping in mind that the higher the score is, the <b> less healthy</b> it is: </p>
+                An map of the result is shown below, keeping in mind that the higher the score is, the <b> less healthy</b> it becomes: </p>
 
                 We notice that ...
             </div>
@@ -204,8 +209,8 @@
                 (probabilistic) information depending on the country we live in. The information is split into four categories:
                 <ul class="list">
                   <li>Where does the product I eat most likely come from?</li>
-                  <li>How healthy is it?</li>
-                  <li>How likely an I eating organic products?</li>
+                  <li>How healthy am I eating?</li>
+                  <li>How likely am I eating organic products?</li>
                   <li>How am I contributing to the environment?</li>
                 </ul>
             </div>
