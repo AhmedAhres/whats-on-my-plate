@@ -1,5 +1,5 @@
 # What's on my plate?
-Analyzing the food impact on the environment and the nutrition score label.
+An analysis of what we eat depending on where we live.
 
 # Abstract
 We are what we eat and the food system drives everything. Nowadays, there are endless range of products being sold in all over the world differing from one country to another. In this sense, different countries have a different impact on their population and on the environment depending on the products being sold and produced.
