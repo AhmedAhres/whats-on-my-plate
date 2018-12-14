@@ -23,7 +23,7 @@
                 <div class="col-lg-12 text-center">
                     <h2>Data Exploration & Cleaning</h2>
                     <hr class="star-primary">
-                    <p> An initial look at the dataset showed us that there are 699,124 rows for each product and 173 columns representing different
+                    <p> An initial look at the dataset showed us that there are 699,124 rows (one per product) and 173 columns representing different
                     information that exist for a specific product. While this may seem like a very large number of information,
                     it also contains a high number of missing values (NaN).
                     An example is shown in the following figure, where the percentage of values that are <b> not </b> missing for some columns is shown:</p> <br>
@@ -32,7 +32,7 @@
                     our analysis. This problem is not specific to only one column, but is the case for more features. <br>
                     However, since our research questions are mainly centered around the topics of nutrition score and eco-friendliness,
                     we were able to remove 116 features making the dataset more lightweight and easier to analyze. For example,
-                    columns containing the URL for the image of the product is not relevant to our research. Additionally,
+                    the columns containing the URL for the product image is not relevant to our research. Additionally,
                     some columns were very similar. An example is shown in the following image: </p>
                     <img class="image-text" src="img/labels.png" alt=""> <br> <br>
                     <p> In this situation, we have manually looked at the columns to select the ones that have more consistent values, i.e.
@@ -51,7 +51,8 @@
                       namely UK and French nutrition scores. However, a closer look at the dataset showed that these two columns
                       are very similar:
                       <img class="image-text" src="img/similarity.png" alt=""> <br> <br>
-                      In fact, these two features are 93.1% similar. As a result, our research can be centered around only one of the nutrition scores. <br> <br>
+                      In fact, these two features are 93.1% similar. This does make sense since the way they are computed is very similar.
+                      As a result of this feature, our research can be centered around only one of the nutrition scores. <br> <br>
                       Finally, <b> eco-friendliness </b> is one other extremely relevant area we are exploring. There are two features that are related
                       to this topic, namely <b> carbon footprint </b> and <b> packaging type </b>. Carbon footprint represents the amount of carbon dioxide
                       released into the atmosphere and the packaging type is simply the packaging in which a given product is sold in.
@@ -80,8 +81,9 @@
                 <div class="col-lg-12 text-center">
                     <h2>What's On My Plate?</h2>
                     <hr class="star-primary">
-                    <p> After an extensive analysis and cleaning of the provided dataset, we dived into answering the <b> What is on my plate </b> question.
-                    In order to do so we analyzed the origin of the products, their eco-friendliness, how "healthy" it is and how likely is it to be organic.
+                    <p> After an extensive analysis and cleaning of the provided dataset, we dived into the following question:
+                    <b> What's on my plate? </b> <br>
+                    In order to do so we analyzed the origin of the products, their eco-friendliness, how "healthy" they are and how likely are they to be organic.
                     Our research endavors have resulted in interesting findings that will be discussed in this section. </p>
                 </div>
             </div>
@@ -104,7 +106,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Which countries sell the highest variety of eco-friendly products in terms of packaging?</h2>
+                    <h2>Which countries contribute most to the environment through eco-friendly packages?</h2>
                     <hr class="star-primary">
                     <p class=list>
                     Product packaging is a complex process. When manufacturers of consumer goods select the types of materials to use in order to package their products,
@@ -157,6 +159,9 @@
                     <hr class="star-primary">
                 </div>
             </div>
+            <p list="list"> After an investigation of the eco-friendliness, the organic labels have also been examined. In some sense, organic food is related to healthiness
+            and eco-friendliness, thus fitting in our analysis. In the past years, statistics show that organic food are becoming more and more popular.
+            The organic food market in the US hit $45.2 billion in sales in 2017, while it was only $20.39 billion in 2012 [2].
             <p class="list"> Some of the most important advantages of organic food include: </p>
             <ul class="list">
               <li>Organic produce contains fewer pesticides.</li>
@@ -164,6 +169,7 @@
               <li>Organic food is often not genetically modified.</li>
               <li>Organically raised animals are <b> NOT </b> given antibiotics or growth hormones.</li>
             </ul>
+             <p class="list"> An analysis of the organic labels have shown the following results: </p>
         </div>
     </subsection>
 
@@ -177,10 +183,13 @@
                 <p class="list"> The nutrition score provided in the dataset establishes a grade for each product depending on the amount of
                 energy, sugar, fat, sodium on one hand and vegetables, nuts, fruits on the other. This score is computed
                 in certain way the lower the score is, the more the product contains healthy ingredients and less unhealthy ingredients.
-                In a sense, this score represents how healthy a product is. Details on how it is calculated is shown in [2]. <br>
+                In a sense, this score represents how healthy a product is. Details on how it is calculated is shown in [3]. <br>
                 In the aim of computing how "healthy" our plate is, we have computed the average nutrition score per country.
-                An image of the result is shown below: </p>
+                As stated earlier, since the French and British nutrition score are very similar (93.1%, same number of products), we have
+                arbitrarily decided to only use the British score as a reference. However, the French nutrition score could have also been used.
+                An image of the result is shown below, keeping in mind that the higher the score is, the <b> less healthy</b> it is: </p>
 
+                We notice that ...
             </div>
         </div>
     </subsection>
@@ -188,7 +197,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>So, what is on my plate exactly?</h2>
+                    <h2>So, what's on my plate exactly?</h2>
                     <hr class="star-primary">
                 </div>
                 <p class = list> This question uses the different answers we have provided earlier. After investigating these characteristics, we propose showing
@@ -196,8 +205,8 @@
                 <ul class="list">
                   <li>Where does the product I eat most likely come from?</li>
                   <li>How healthy is it?</li>
-                  <li>How likely is it organic?</li>
-                  <li>How does it contribute to nature?</li>
+                  <li>How likely an I eating organic products?</li>
+                  <li>How am I contributing to the environment?</li>
                 </ul>
             </div>
         </div>
@@ -211,9 +220,13 @@
                 <div class="col-lg-12 text-center">
                     <h2>References</h2>
                     <hr class="star-primary">
-                    <p class="list"> [1] <b> Biodegradable and Recyclable Packaging Material: </b> - Kate Pullen
-                      <i> https://greenliving.lovetoknow.com/Biodegradable_and_Recyclable_Packaging_Material </i> <br> </p>
-                    <p class="list"> [2] <b> French nutrition score - Open Food Facts: </b>  <i> https://fr.openfoodfacts.org/nutriscore </i>
+                    <p class="list"> [1] <b> Biodegradable and Recyclable Packaging Material: - Kate Pullen </b>
+                      <i> <a href="https://greenliving.lovetoknow.com/Biodegradable_and_Recyclable_Packaging_Material"> https://greenliving.lovetoknow.com/Biodegradable_and_Recyclable_Packaging_Material
+                      </a> </i> <br> </p>
+                    <p class = "list"> [2] <b> Sales growth of organic foods slips to 6.4% in 2017 -  Jeff Gelski (2018): </b>
+                      <i> <a href="https://www.foodbusinessnews.net/articles/11853-sales-growth-of-organic-foods-slips-to-64-in-2017"> https://www.foodbusinessnews.net/articles/11853-sales-growth-of-organic-foods-slips-to-64-in-2017 </a> </i>
+                    <p class="list"> [3] <b> British nutrition score - The UK Ofcom Nutrient Profiling Model (page 6 and 7): </b>
+                      <i> <a href="https://www.ndph.ox.ac.uk/cpnp/files/about/uk-ofcom-nutrient-profile-model.pdf"> https://www.ndph.ox.ac.uk/cpnp/files/about/uk-ofcom-nutrient-profile-model.pdf </a> </i>
                 </div>
             </div>
         </div>
