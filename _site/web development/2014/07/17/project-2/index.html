@@ -129,9 +129,9 @@
                     this dataset separates countries in two categories: those where the product is sold and those where the product is manufactured.
                     The columns related to the countries where products are sold have nearly no missing values, which is extremely helpful for our analysis.
                     On the other hand, the data concerning countries was extremely messy. More specifically, some countries are written in different
-                    languages and/or different ways such as "Frankreich" and "Frankrike" both representing the country of France.
-                    On top of this issue, values not representing countries were part of this feature such as "European union"
-                    or even "Global market". Hence, we have proceded in heavy data cleaning for this part.
+                    languages and/or different ways such as  <i> Frankreich </i> and  <i> Frankrike </i> both representing the country of France.
+                    On top of this issue, values not representing countries were part of this feature such as <i> European union </i>
+                    or even <i> Global market </i> . Hence, this topic has resulted in heavy data cleaning in order to have correct and consistent country names.
                     After successfully cleaning the data, we have looked at the distribution of the top 10 countries in the dataset to have an idea about
                     the location where the products in this dataset are mainly sold.</p> <br>
                     <img class="image-text" src="img/countries.png" alt=""> <br> <br>
@@ -140,6 +140,7 @@
                       are sold in the dataset. <br> <br>
                       We have also examined the distribution of the countries where products mostly come from (their origins), resulting in the following:
                       <img class="image-text" src="img/countries.png" alt=""> <br> <br>
+                      <p> We notice that France is also leading in terms of country of origin, followed by the United states.
                       Another important aspect of our research is the <b> nutrition score computation </b>. The dataset provides two types of grading
                       namely British and French nutrition scores. The nutrition score is computed using the ingredients of the product (more details in the next section).
                       However, a closer look at the dataset showed that these two columns are actually very similar:
@@ -190,7 +191,9 @@
                     <hr class="star-primary">
                 </div>
                 <p class="list"> To understand the origin of the products, we have decided to investigate the proportion of imported/exported products per country.
-                This is then used to compute where do the products we eat in a certain country most likely come from. </p>
+                This is then used to compute where do the products we eat in a certain country most likely come from. One issue with this topic
+                is the fact that most products are created/sold in France and the United States, resulting in a certain bias towards those countries.
+                Therefore, the result can be interpreted mostly as an approximation using the data we have. </p>
             </div>
         </div>
     </subsection>
@@ -253,8 +256,8 @@
                 </div>
             </div>
             <p list="list"> After an investigation of the eco-friendliness, the organic labels have also been examined. In some sense, organic food is related to healthiness
-            and eco-friendliness, thus fitting in our analysis. In the past years, statistics show that organic food are becoming more and more popular.
-            The organic food market in the US hit $45.2 billion in sales in 2017, while it was only $20.39 billion in 2012 [2].
+            and eco-friendliness, thus fitting in our analysis. In the past years, statistics have shown that organic food is becoming more and more popular.
+            In fact, the organic food market in the US hit $45.2 billion in sales in 2017, while it was only $20.39 billion in 2012 [2].
             <p class="list"> Some of the most important advantages of organic food include: </p>
             <ul class="list">
               <li>Organic produce contains fewer pesticides.</li>
@@ -280,7 +283,7 @@
                 In the aim of computing how "healthy" our plate is, we have computed the average nutrition score per country.
                 As stated earlier, since the French and British nutrition score are very similar (93.3%, same number of products), we have
                 arbitrarily decided to only use the British score as a reference. However, the French nutrition score could have also been used.
-                An map of the result is shown below, keeping in mind that the higher the score is, the <b> less healthy</b> it becomes: </p>
+                A map of the result is shown below, keeping in mind that the higher the score is, the <b> less healthy</b> it becomes: </p>
 
                 We notice that ...
             </div>
