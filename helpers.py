@@ -154,7 +154,7 @@ def clean_coutries_tags(df):
 
 
 def clean_origins_tags(df):
-    ot = current_data['origins_tags'].astype(str)
+    ot = df['origins_tags'].astype(str)
     ot[ot.str.contains('algeri')] = "Algeria"
     ot[ot.str.contains('armeni')] = "Armenia"
     ot[ot.str.contains('australi')] = "Australia"

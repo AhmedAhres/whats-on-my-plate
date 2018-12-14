@@ -1,12 +1,12 @@
 # What's on my plate?
-An analysis of what we eat depending on where we live.
+Analyzing the food impact on the environment and the nutrition score label.
 
 # Abstract
 We are what we eat and the food system drives everything. Nowadays, there are endless range of products being sold in all over the world differing from one country to another. In this sense, different countries have a different impact on their population and on the environment depending on the products being sold and produced.
-The aim of this project is to analyze what we eat depending on where we live.
+The aim of this project is to analyze how these products can have an impact on the daily life of their consumers in terms of healthiness, eco-friendliness as well as production. 
 
-Our goal is to collect data on the origin, eco-friendliness and healthiness to show what we eat in different countries. 
-Through our analysis, we hope to give more information to the user about what he/she eats depending on the country where he/she lives.  
+Our goal is to understand and explain how the food industry works and how it can influence other aspects such as the environment and the population eating habits.
+In order to accomplish our goal, we will be used a large data-set providing extensive information about a large number of products being sold in supermarkets worldwide.
 
 # Data Story
 The data story can be found in https://ahmedahres.github.io/whats-on-my-plate/
@@ -15,15 +15,11 @@ The data story can be found in https://ahmedahres.github.io/whats-on-my-plate/
 We will guide our work with the following questions:
 
 - What is the proportion of imported/exported products per country?
-- Which countries contribute most to the environment through eco-friendly packages?
+- Which countries sell the highest variety of eco-friendly products in terms of packaging?
 - Which countries have the largest variety of organic-labeled products?
-- How healthy do we eat in the different countries?
-
-These questions will then be used to answer the question stated in the title:
-
-- What's on my plate?
-
-The aim is to provide, depending on the country the user lives in, data about the origin and characteristics of the food he/she eats. It can also be interesting for the user to see information about his/her country of origin (in case the user lives in a different country).
+- What is the average nutrition score of every product category?
+- What nutrition-related features imply a better nutrition score (or vice-versa)?
+- Given the product and assuming that the ingredients are known, what is the expected nutrition score?
 
 # Datasets
 In order to answer these research questions, we will be looking at the ***Open Food Facts*** database. This dataset provides us with information about the ingredients, category, nutrition score, countries where sold and produced for every product in the supermarkets worldwide. For example, by analyzing where a certain product is produced and sold, we can answer questions regarding trading between the different countries. Moreover, we will be using the data-set containing for the geographical position of the center of each country. The data-set was taken from the following link: https://developers.google.com/public-data/docs/canonical/countries_csv?fbclid=IwAR11sd1ArI7yBbHAJvsvNCUmOaxdwf__o5bd1w8RepWD47NrVO30vN8Ka_0
