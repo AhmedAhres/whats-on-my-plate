@@ -8,6 +8,8 @@ The aim of this project is to analyze how these products can have an impact on t
 Our goal is to understand and explain how the food industry works and how it can influence other aspects such as the environment and the population eating habits.
 In order to accomplish our goal, we will be used a large data-set providing extensive information about a large number of products being sold in supermarkets worldwide.
 
+# Data Story
+The data story can be found in https://ahmedahres.github.io/whats-on-my-plate/
 
 # Research questions
 We will guide our work with the following questions:
