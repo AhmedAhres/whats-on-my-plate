@@ -78,6 +78,6 @@ In order to answer these research questions, we will be looking at the ***Open F
 Enhance our data with more external sources of data.
 
 # Contibution of each member
-- Ahmed Ahres:
+- Ahmed Ahres: Design and creation of all the data story, packaging research question, maintaining the notebook up-to-date (in case of major changes).
 - Ali El Abridi:
 - Mathias Gonçalves: Most of the data cleaning and exploration, the import/export question.
