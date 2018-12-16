@@ -74,9 +74,6 @@ In order to answer these research questions, we will be looking at the ***Open F
     - Finalize the project and the report.
     - Start working on the poster and presentation.
 
-# Options to consider:
-Enhance our data with more external sources of data.
-
 # Contibution of each member
 - Ahmed Ahres: Design and creation of all the data story, packaging research question, maintaining the notebook up-to-date (in case of major changes).
 - Ali El Abridi:
