@@ -428,12 +428,6 @@ footer .footer-below {
 .column {
   float: left;
   width: 50%;
-  margin-left: 10vh;
-}
-
-.column2 {
-  float: left;
-  width: 50%;
 }
 
 /* Clear floats after image containers */

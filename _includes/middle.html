@@ -23,12 +23,12 @@
                 <div class="col-lg-12 text-center">
                     <h2>Data Exploration & Cleaning</h2>
                     <hr class="star-primary">
-                    <p class="list"> An initial look at the dataset showed us that there are 699,124 rows (one per product) and 173 columns representing different
+                    <p> An initial look at the dataset showed us that there are 699,124 rows (one per product) and 173 columns representing different
                     information that exist for a specific product. While this may seem like a very large number of information,
                     it also contains a high number of missing values (NaN).
                     An example is shown in the following figure, where the percentage of values that are <b> not </b> missing for some columns is shown:</p> <br>
                     <img class="img-responsive" src="img/non-nan.png" alt=""> <br> <br>
-                    <p class="list"> We notice that some features such as <i> manufacturing_places </i> have mostly missing data and could therefore jeopardize the depth of our research.
+                    <p> We notice that some features such as <i> manufacturing_places </i> have mostly missing data and could therefore jeopardize the depth of our research.
                     This problem is not specific to only one column, but is the case for more features. <br>
                     However, since our research questions are mainly centered around the topics of nutrition score and eco-friendliness,
                     we were able to remove 160 features making the dataset more lightweight and easier to analyze. For example,
@@ -56,7 +56,7 @@
                       <p class="list"> We notice that France is also leading in terms of country of origin, followed by Spain. <br> <br>
                       Another important aspect of our research is the <b> nutrition score </b>. The dataset provides two types of grading
                       namely British and French nutrition scores. This data is computed for over 147,000 products and thus does not suffer from a very
-                      large number of missing values. It is computed using the ingredients of the product, mainly based on sugar and vegetables/fruits
+                      large number of missing values. It is computed using the ingredients of the product, mainly based on sugar and vegetables/fruits.
                       (more details in the next section).
                       However, a closer look at the dataset showed that these two columns are actually very similar:
                       <img class="image-text" src="img/similarity.png" alt=""> <br> <br>
@@ -89,7 +89,7 @@
                 <div class="col-lg-12 text-center">
                     <h2>What's On My Plate?</h2>
                     <hr class="star-primary">
-                    <p class="list"> After an extensive analysis and cleaning of the provided dataset, we dived into the following question:
+                    <p> After an extensive analysis and cleaning of the provided dataset, we dived into the following question:
                     <b> What's on my plate? </b> <br>
                     In order to do so we analyzed the origin of the products, their eco-friendliness, how "healthy" they are and the organic label.
                     Our research endavors have resulted in interesting findings that will be discussed in this section. </p>
@@ -107,7 +107,7 @@
                 <p class="list"> To understand the origin of the products, we have decided to investigate the proportion of imported/exported products per country.
                 This is then used to compute where do the products we eat in a certain country most likely come from. One issue with this topic
                 is the fact that most products are created/sold in France and the United States, resulting in a certain bias towards those countries.
-                Therefore, the result can be interpreted mostly as an approximation using the data we have.  <br>
+                Therefore, the result can be interpreted mostly as an approximation using the data we have.  <br> <br>
                 We have analyzed the import/export distribution for every country, the following figure show it for the top 6 countries that appear the most in
                 <i> origins_tags </i> (note that <i> others </i> stands for countries other than the ones listed with very low proportions):</p>
                 <div class="row">
@@ -115,7 +115,7 @@
                  <img src="img/france_import.png" style="width:100%">
                </div>
                <div class="column">
-                 <img src="img/germany_import.png"alt="Forest" style="width:100%">
+                 <img src="img/germany_import.png" style="width:100%">
                </div>
               </div>
               <div class="row">
@@ -123,7 +123,7 @@
                <img src="img/switzerland_import.png" style="width:100%">
              </div>
              <div class="column">
-               <img src="img/spain_import.png"alt="Forest" style="width:100%">
+               <img src="img/spain_import.png" style="width:100%">
              </div>
             </div>
             <div class="row">
@@ -131,12 +131,13 @@
              <img src="img/italy_import.png" style="width:100%">
            </div>
            <div class="column">
-             <img src="img/mexico_import.png"alt="Forest" style="width:100%">
+             <img src="img/mexico_import.png" style="width:100%">
            </div>
           </div>
           <p class="list"> The results show that most products in the dataset are not imported but are sold in their original country. Furthermore,
           we notice that Italy and Mexico import less than 20% of their products, while <b> Germany imports more than 50% of its products. </b>
-          Switzerland and France have quite similar results, import around 35-40% of their products.<br> <br>
+          Switzerland and France have quite similar results, import around 35-40% of their products.<br>
+          The following image representing a map shows how food is imported across the globe (for selected countries):
           This analysis presents interesting results and will be used later to see where do products mostly come from when we live in a certain country.
           More specifically, it will be used to show how "international" our plate is. </p>
             </div>
@@ -184,7 +185,7 @@
                      <img src="img/top10.png" style="width:100%">
                    </div>
                    <div class="column">
-                     <img src="img/bottom10.png"alt="Forest" style="width:105%">
+                     <img src="img/bottom10.png" style="width:105%">
                    </div>
                   </div>
                 </div> <br> <br> <br>
@@ -215,15 +216,13 @@
               <li>Organic food is often not genetically modified.</li>
               <li>Organically raised animals are <b> NOT </b> given antibiotics or growth hormones.</li>
             </ul>
-             <p class="list"> An analysis of the organic labels of products being sold have shown the following results: </p> <br> <br>
-             <p> <b> Interactive map showing the percentage of organic-labeled products sold per country </b> </p>
+             <p class="list"> An analysis of the organic labels of the products being sold have shown the following results: </p> <br> <br>
+             <b> Interactive map showing the nutrition score per country for the countries that have at least 10 products with the nutrition score </b> </p>
              <iframe src="organic_labeled_per_country.html" height=500 width=1000 margin="auto"></iframe> <br> <br>
              <p class="list"> The map shows us that Georgia, Germany and France rank high in terms of organic-labeled products. Since France has also a very high number of products
              in the dataset, then it has a higher level of confidence when compared to Georgia for example (since it has a low number of sold products in the dataset). Thus,
-              result for France can be interpreted as very similar to the real situation.
-            On the other hand, we notice that the United Kingdom, Romania and Australia have a low percentage of organic-labeled products being sold. A more informative table of some countries
-            is presented below: </p>
-            <img class="image-text" src="img/top_organic.png" alt=""> <br> <br>
+            result for France can be interpreted as very similar to the actual situation.
+            On the other hand, we notice that the United Kingdom, Romania and Australia have a low percentage of organic-labeled products being sold.</p>
         </div>
     </subsection>
 
@@ -248,9 +247,8 @@
                 <b> Interactive map showing the nutrition score per country for the countries that have at least 10 products with the nutrition score </b> </p>
                 <iframe src="uk_nutrition_score_per_country.html" height=500 width=1000 align="middle"></iframe> <br> <br>
                 <p class="list"> We notice that India and Denmark have the highest nutrition score and thus the less healthy products in the dataset.
-                On the other hand, Netherlands and Georgia sell very healthy products. Switzerland, Spain and the UK have also
-                more or less healthy products. A more informative table of some countries is presented below:
-                <img class="image-text" src="img/top_nutrition.png" alt=""> <br> <br>
+                On the other hand, Netherlands and Georgia have the healthiest products in the dataset. Switzerland, Spain and the UK have also
+                more or less healthy products. <br> <br>
                 This analysis will be used in the final question:</p>
             </div>
         </div>
