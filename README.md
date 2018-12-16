@@ -77,4 +77,7 @@ In order to answer these research questions, we will be looking at the ***Open F
 # Options to consider:
 Enhance our data with more external sources of data.
 
-# Questions for TAs
+# Contibution of each member
+- Ahmed Ahres:
+- Ali El Abridi:
+- Mathias Gonçalves: Most of the data cleaning and exploration, the import/export question.
