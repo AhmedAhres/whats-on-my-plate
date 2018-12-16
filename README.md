@@ -76,5 +76,5 @@ In order to answer these research questions, we will be looking at the ***Open F
 
 # Contibution of each member
 - Ahmed Ahres: Design and creation of all the data story, packaging research question, maintaining the notebook up-to-date (in case of major changes).
-- Ali El Abridi: Design and implementation of the average nutrition score and organic label research questions (using Folium)
+- Ali El Abridi: Design and implementation of the average nutrition score and organic label research questions (using Folium), contributed to the data cleaning, data exploration, and data story.
 - Mathias Gonçalves: Most of the data cleaning and exploration, the import research question.
