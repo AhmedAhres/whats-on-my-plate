@@ -58,7 +58,8 @@
                       namely British and French nutrition scores. This data is computed for over 147,000 products and thus does not suffer from a very
                       large number of missing values. It is computed using the ingredients of the product, mainly based on sugar and vegetables/fruits.
                       (more details in the next section).
-                      However, a closer look at the dataset showed that these two columns are actually very similar:
+                      However, a closer look at the dataset showed that these two columns are actually very similar: <br> <br>
+                      Correlation between both nutrition scores
                       <img class="image-text" src="img/similarity.png" alt=""> <br> <br>
                       In fact, these two features are 92.8% identical. This does make sense since the way they are computed is very similar.
                       As a result of this analysis, our research can be centered around only one of the nutrition scores. <br> <br>
@@ -244,7 +245,7 @@
                 As stated earlier, since the French and British nutrition score are very similar (92.8%, same number of products), we have
                 arbitrarily decided to only use the British score as a reference. However, the French nutrition score could have also been used.
                 Moreover, we have analyzed only the countries that have at least 10 products containing the nutrition score data in the dataset.
-                This was done to avoid ranking countries which for instance have only one or two healthy products and would thus appear to be very healthy countries.
+                This was done to avoid ranking countries which have only one or two healthy products and would thus appear to be very healthy countries without sufficient data.
                 A map of the result is shown below, keeping in mind that the higher the score is, the <b> less healthy</b> it becomes:  <br> <br>
 
                 <b> Interactive map showing the nutrition score for the countries that have at least 10 products with the nutrition score </b> </p>
@@ -264,16 +265,22 @@
                     <hr class="star-primary">
                 </div>
                 <p class = list> This question uses the different answers we have provided earlier. After investigating these characteristics, we propose showing
-                (probabilistic) information depending on the country we live in. The information is split into four categories:
+                (probabilistic) information depending on the country we live in. The information is split into five categories:
                 <ul class="list">
-                  <li>Where does the product I eat most likely come from?</li>
                   <li>How healthy am I eating?</li>
                   <li>How likely am I eating organic products?</li>
                   <li>How am I contributing to the environment?</li>
+                  <li>What percentage of my plate is produced locally?</li>
+                  <li>Where does the product I eat most likely come from (aside from local)?</li>
                 </ul>
                 <p class="list"> The result is summarized below for several selected countries: </p>
                 <img class=final-image src="img/result.png" alt=""> <br> <br>
-
+                <p class="list"> This table provides a summary of our research, which can be extended to more characteristics such as the "Top export country" or even
+                an analysis of the ingredients. Unfortunately, the dataset contains a large number of missing values and thus this table is only approximative,
+                Another way of presenting it would have been to allow the user to manually select the desired country, but we thought this brings all our research together
+                in a better way. <br> <br> We hope this helps you gain insights into interesting data about what is on your or your family's plate,
+                <b> and we are happy to be the ones providing it. </b>
+               </p>
             </div>
         </div>
     </subsection>
