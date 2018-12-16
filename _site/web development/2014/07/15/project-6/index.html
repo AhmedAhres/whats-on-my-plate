@@ -119,7 +119,7 @@
                     <img class="img-responsive" src="img/non-nan.png" alt=""> <br> <br>
                     <p> We notice that some features such as <i> manufacturing_places </i> have mostly missing data and could therefore jeopardize the depth of our research.
                     This problem is not specific to only one column, but is the case for more features. <br>
-                    However, since our research questions are mainly centered around the topics of nutrition score and eco-friendliness,
+                    However, since our research questions are mainly centered around the topics of nutrition score, eco-friendliness and countries,
                     we were able to remove 160 features making the dataset more lightweight and easier to analyze. For example,
                     the column containing the URL for the product image is not relevant to our research. Additionally,
                     some columns were very similar. An example is shown in the following image: </p>
@@ -128,9 +128,9 @@
                     values in the same language and without typos. After removing all these columns along with the ones that not needed,
                     we were left with only 13 features in total. <br>
                     One of the most fundamental aspects of our research relies on <b> countries </b>. More specifically,
-                    this dataset separates countries in two categories: those where the product is sold and those where the product is manufactured.
+                    this dataset separates countries in two categories: those where the product is sold and those where the product is originated from.
                     The columns related to the countries where products are sold have nearly no missing values, which is extremely helpful for our analysis.
-                    On the other hand, the data concerning countries was extremely messy. More specifically, some countries are written in different
+                    However, it has very inconsistent and messy values. More specifically, some countries are written in different
                     languages and/or different ways such as  <i> "Frankreich" </i> and <i> "Frankrike" </i> both representing the country of France.
                     On top of this issue, values not representing countries were part of this feature such as <i> "European union" </i>
                     or even <i> "Global market" </i>. Hence, this topic has resulted in heavy data cleaning in order to have correct and consistent country names.
@@ -138,7 +138,7 @@
                     the location where the products in this dataset are mainly sold.</p> <br>
                     <img class="img-responsive" src="img/countries.png" alt=""> <br> <br>
                     <p class="list"> We notice that France has by far the largest number of elements in the dataset, with over 60% of the total products
-                      in the dataset, followed by the United States. In fact, these two countries alone represent 86% of countries where the products
+                      in the dataset, followed by the United States. In fact, these two countries alone represent 85% of countries where the products
                       are sold in the dataset. <br> <br>
                       We have also examined the distribution of the countries where products mostly come from (their origins), resulting in the following: </p>
                     <img class="img-responsive" src="img/origins.png" alt=""> <br> <br>
@@ -193,7 +193,7 @@
                     <h2>What is the proportion of imported products per country?</h2>
                     <hr class="star-primary">
                 </div>
-                <p class="list"> To understand the origin of the products, we have decided to investigate the proportion of imported/exported products per country.
+                <p class="list"> To understand the origin of the products, we have decided to investigate the proportion of importedproducts per country.
                 This is then used to compute where do the products we eat in a certain country most likely come from. One issue with this topic
                 is the fact that most products are created/sold in France and the United States, resulting in a certain bias towards those countries.
                 Therefore, the result can be interpreted mostly as an approximation using the data we have.  <br> <br>
@@ -223,11 +223,11 @@
              <img src="img/mexico_import.png" style="width:100%">
            </div>
           </div>
-          <p class="list"> The results show that most products in the dataset are not imported but are sold in their original country. Furthermore,
+          <p class="list"> The results show that most products in the dataset are not imported but rather sold in their original country. Furthermore,
           we notice that Italy and Mexico import less than 20% of their products, while <b> Germany imports more than 50% of its products. </b>
-          Switzerland and France have quite similar results, import around 35-40% of their products.<br>
-          The following map hows how food is imported across the globe (zooming helps tracking edges where it is dense): </p>
-          <b> <p class="list"> Interactive map showing the import/export of products between several countries </p> </b>
+          Switzerland and France have quite similar results, importing around 35-40% of their products.<br>
+          The following map hows how food is imported across the globe: </p>
+          <b> <p class="list"> Interactive map showing the import/export of products between several countries (zooming helps tracking edges where it is dense) </p> </b>
           <iframe src="import_map.html" height=500 width=1000 margin="auto"></iframe> <br> <br>
           <p class="list"> This analysis presents interesting results and will be used later to see where products mostly come from when we live in a certain country.
           More specifically, it will be used to show how "international" our plate is. </p>
@@ -258,7 +258,7 @@
                       <li>Metal</li>
                     </ul>
                     <p class=list> Resources have shown that cardboard and paper are very eco-friendly packaging types, while (non-recyclable) plastic is not.
-                    Moreover, glass is considered as an eco-friendly package, though not as much as cardboard or paper.
+                    Furthermore, glass is considered as an eco-friendly package, though not as much as cardboard or paper.
                     As a result, we have decided to quantify these types based on comparison with the assumption that plastic is not recyclable,
                     and have given each packaging a certain score, where the higher the grade is the more eco-friendly it is.  </p>
                     <ul class="list">
@@ -313,7 +313,8 @@
              <p class="list"> The map shows us that Georgia, Germany and France rank high in terms of organic-labeled products. Since France has also a very high number of products
              in the dataset, then it has a higher level of confidence when compared to Georgia for example (since it has a low number of sold products in the dataset). Thus,
             result for France can be interpreted as very similar to the actual situation.
-            On the other hand, we notice that the United Kingdom, Romania and Australia have a low percentage of organic-labeled products being sold.</p>
+            On the other hand, we notice that the United Kingdom, Romania and Australia have a low percentage of organic-labeled products being sold. <br> <br>
+           This analysis will be used to see how likely is our plate organic. </p>
         </div>
     </subsection>
 
@@ -335,12 +336,12 @@
                 This was done to avoid ranking countries which for instance have only one or two healthy products and would thus appear to be very healthy countries.
                 A map of the result is shown below, keeping in mind that the higher the score is, the <b> less healthy</b> it becomes:  <br> <br>
 
-                <b> Interactive map showing the nutrition score per country for the countries that have at least 10 products with the nutrition score </b> </p>
+                <b> Interactive map showing the nutrition score for the countries that have at least 10 products with the nutrition score </b> </p>
                 <iframe src="uk_nutrition_score_per_country.html" height=500 width=1000 align="middle"></iframe> <br> <br>
                 <p class="list"> We notice that India and Denmark have the highest nutrition score and thus the less healthy products in the dataset.
                 On the other hand, Netherlands and Georgia have the healthiest products in the dataset. Switzerland, Spain and the UK have also
                 more or less healthy products. <br> <br>
-                This analysis will be used in the final question:</p>
+                This analysis will be used to quantify healthiness in the final question:</p>
             </div>
         </div>
     </subsection>
@@ -359,6 +360,9 @@
                   <li>How likely am I eating organic products?</li>
                   <li>How am I contributing to the environment?</li>
                 </ul>
+                <p class="list"> The result is summarized below for several selected countries: </p>
+                <img class=final-image src="img/result.png" alt=""> <br> <br>
+
             </div>
         </div>
     </subsection>
