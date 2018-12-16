@@ -428,7 +428,6 @@ footer .footer-below {
 .column {
   float: left;
   width: 50%;
-  padding: 5vh;
 }
 
 /* Clear floats after image containers */
