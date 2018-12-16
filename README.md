@@ -14,7 +14,7 @@ The data story can be found in the following link: https://ahmedahres.github.io/
 # Research questions
 We will guide our work with the following questions:
 
-- What is the proportion of imported/exported products per country?
+- What is the proportion of imported products per country?
 - Which countries contribute most to the environment through eco-friendly packages?
 - Which countries have the largest variety of organic-labeled products?
 - How healthy do we eat in the different countries?
@@ -76,5 +76,5 @@ In order to answer these research questions, we will be looking at the ***Open F
 
 # Contibution of each member
 - Ahmed Ahres: Design and creation of all the data story, packaging research question, maintaining the notebook up-to-date (in case of major changes).
-- Ali El Abridi:
-- Mathias Gonçalves: Most of the data cleaning and exploration, the import/export question.
+- Ali El Abridi: Design and implementation of the average nutrition score and organic label research questions (using Folium)
+- Mathias Gonçalves: Most of the data cleaning and exploration, the import research question.
