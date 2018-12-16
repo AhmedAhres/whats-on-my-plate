@@ -133,6 +133,38 @@ def clean_manufact(df):
 
 def clean_coutries_tags(df):
     ct = df['countries_tags'].astype(str)
+    
+    ct = ct.str.split(':').str.get(1)
+
+    # We capitalize the first letter
+    ct = ct.str.capitalize()
+
+    # Some results are United-states, we remove the "-" for better readability
+    ct = ct.str.replace("-", " ")
+    ct = ct.str.replace(",en", "")
+    ct = ct.str.replace(",fr", "")
+    ct = ct.str.replace(",de", "")
+    ct = ct.str.replace(",ch", "")
+    ct = ct.str.replace(",it", "")
+    ct = ct.str.replace(",sq", "")
+    ct = ct.str.replace(",es", "")
+
+    # We also replace the values representing the same country to the country that is represented
+    ct = ct.str.replace("Suisse", "Switzerland")
+
+    ct = ct.str.replace("French polynesia", "France")
+    ct = ct.str.replace("French guiana", "France")
+    ct = ct.str.replace("Martinique", "France")
+    ct = ct.str.replace("Guadeloupe", "France")
+    ct = ct.str.replace("New caledonia", "France")
+    ct = ct.str.replace("Reunion", "France")
+    ct = ct.str.replace("Frankreich", "France")
+    ct = ct.str.replace("Frankrike", "France")
+
+    ct = ct.str.replace("Deutschland", "Germany")
+    ct = ct.str.replace("Allemagne", "Germany")
+    ct = ct.astype(str)
+    
     ct[ct.str.contains('Albania,sq')] = 'Albania'
     ct[ct.str.contains('Algerie')] = 'Algeria'
     ct[ct.str.contains('Belgie|Belgique')] = 'Belgium'
@@ -147,7 +179,8 @@ def clean_coutries_tags(df):
     ct[ct.str.contains('Spain,es')] = 'Spain'
     ct[ct.str.contains('Portugal,es')] = 'Portugal'
     ct[ct.str.contains('Danemark')] = 'Denmark'
-    ct[ct.str.contains('Danemark')] = 'Denmark'
+    
+    
     
     return ct
 
