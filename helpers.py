@@ -147,8 +147,7 @@ def clean_coutries_tags(df):
     ct[ct.str.contains('Spain,es')] = 'Spain'
     ct[ct.str.contains('Portugal,es')] = 'Portugal'
     ct[ct.str.contains('Danemark')] = 'Denmark'
-    
-    
+    ct[ct.str.contains('Danemark')] = 'Denmark'
     
     return ct
 
