@@ -9,7 +9,7 @@ Our goal is to collect data on the origin, eco-friendliness and healthiness to s
 Through our analysis, we hope to give more information to the user about what he/she eats depending on the country where he/she lives.  
 
 # Data Story
-The data story can be found in https://ahmedahres.github.io/whats-on-my-plate/
+The data story can be found in the following link: https://ahmedahres.github.io/whats-on-my-plate/
 
 # Research questions
 We will guide our work with the following questions:
