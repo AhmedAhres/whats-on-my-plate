@@ -17,7 +17,7 @@ body {
 }
 
 p {
-    font-size: 2vh;
+    font-size: 2.1vh;
 }
 
 p.small {
@@ -428,6 +428,7 @@ footer .footer-below {
 .column {
   float: left;
   width: 50%;
+  padding: 5vh;
 }
 
 /* Clear floats after image containers */
@@ -435,11 +436,6 @@ footer .footer-below {
   content: "";
   clear: both;
   display: table;
-}
-
-iframe {
-  margin-left: auto;   /* Automatic margin from left */
-  margin-right: auto; /* Automatic margin from right */
 }
 
 .portfolio-modal .modal-content .item-details {
