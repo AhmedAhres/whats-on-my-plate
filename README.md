@@ -9,12 +9,12 @@ Our goal is to collect data on the origin, eco-friendliness and healthiness to s
 Through our analysis, we hope to give more information to the user about what he/she eats depending on the country where he/she lives.  
 
 # Data Story
-The data story can be found in https://ahmedahres.github.io/whats-on-my-plate/
+The data story can be found in the following link: https://ahmedahres.github.io/whats-on-my-plate/
 
 # Research questions
 We will guide our work with the following questions:
 
-- What is the proportion of imported/exported products per country?
+- What is the proportion of imported products per country?
 - Which countries contribute most to the environment through eco-friendly packages?
 - Which countries have the largest variety of organic-labeled products?
 - How healthy do we eat in the different countries?
@@ -74,7 +74,7 @@ In order to answer these research questions, we will be looking at the ***Open F
     - Finalize the project and the report.
     - Start working on the poster and presentation.
 
-# Options to consider:
-Enhance our data with more external sources of data.
-
-# Questions for TAs
+# Contibution of each member
+- Ahmed Ahres: Design and creation of all the data story, packaging research question, maintaining the notebook up-to-date (in case of major changes).
+- Ali El Abridi: Design and implementation of the average nutrition score and organic label research questions (using Folium), contributed to the data cleaning, data exploration, and data story.
+- Mathias Gonçalves: Most of the data cleaning and exploration, the import research question.
