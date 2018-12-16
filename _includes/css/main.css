@@ -55,7 +55,7 @@ hr.star-primary:after {
     top: -.8em;
     padding: 0 .25em;
     font-family: FontAwesome;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 hr.star-light {
@@ -414,7 +414,7 @@ footer .footer-below {
 }
 
 .list {
-  font-size: 2vh;
+  font-size: 4vh;
 }
 
 .column {

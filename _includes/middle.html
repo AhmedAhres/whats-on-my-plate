@@ -23,7 +23,7 @@
                 <div class="col-lg-12 text-center">
                     <h2>Data Exploration & Cleaning</h2>
                     <hr class="star-primary">
-                    <p> An initial look at the dataset showed us that there are 709,594 rows (one per product) and 173 columns representing different
+                    <p> An initial look at the dataset showed us that there are 699,124 rows (one per product) and 173 columns representing different
                     information that exist for a specific product. While this may seem like a very large number of information,
                     it also contains a high number of missing values (NaN).
                     An example is shown in the following figure, where the percentage of values that are <b> not </b> missing for some columns is shown:</p> <br>
@@ -37,7 +37,7 @@
                     <img class="image-text" src="img/labels.png" alt=""> <br> <br>
                     <p> In this situation, we have manually looked at the columns to select the ones that have more consistent values, i.e.
                     values in the same language and without typos. After removing all these columns along with the ones that not needed,
-                    we were left with only 15 features in total. <br>
+                    we were left with only 13 features in total. <br>
                     One of the most fundamental aspects of our research relies on <b> countries </b>. More specifically,
                     this dataset separates countries in two categories: those where the product is sold and those where the product is manufactured.
                     The columns related to the countries where products are sold have nearly no missing values, which is extremely helpful for our analysis.
@@ -47,20 +47,20 @@
                     or even <i> "Global market" </i>. Hence, this topic has resulted in heavy data cleaning in order to have correct and consistent country names.
                     After successfully cleaning the data, we have looked at the distribution of the top 10 countries in the dataset to have an idea about
                     the location where the products in this dataset are mainly sold.</p> <br>
-                    <img class="image-text" src="img/countries.png" alt=""> <br> <br>
+                    <img class="img-responsive" src="img/countries.png" alt=""> <br> <br>
                     <p> We notice that France has by far the largest number of elements in the dataset, with over 60% of the total products
                       in the dataset, followed by the United States. In fact, these two countries alone represent 86% of countries where the products
                       are sold in the dataset. <br> <br>
-                      We have also examined the distribution of the countries where products mostly come from (their origins), resulting in the following:
-                      <img class="image-text" src="img/countries.png" alt=""> <br> <br>
-                      <p> We notice that France is also leading in terms of country of origin, followed by the United states. <br> <br>
+                      We have also examined the distribution of the countries where products mostly come from (their origins), resulting in the following: </p>
+                    <img class="img-responsive" src="img/origins.png" alt=""> <br> <br>
+                      <p> We notice that France is also leading in terms of country of origin, followed by Spain. <br> <br>
                       Another important aspect of our research is the <b> nutrition score </b>. The dataset provides two types of grading
                       namely British and French nutrition scores. This data is computed for over 147,000 products and thus does not suffer from a very
                       large number of missing values. It is computed using the ingredients of the product, mainly based on sugar and vegetables/fruits.
                       (more details in the next section).
                       However, a closer look at the dataset showed that these two columns are actually very similar:
                       <img class="image-text" src="img/similarity.png" alt=""> <br> <br>
-                      In fact, these two features are 93.3% identical. This does make sense since the way they are computed is very similar.
+                      In fact, these two features are 92.8% identical. This does make sense since the way they are computed is very similar.
                       As a result of this analysis, our research can be centered around only one of the nutrition scores. <br> <br>
                       Finally, <b> eco-friendliness </b> is one other extremely relevant area we are exploring. There are two features that are related
                       to this topic, namely <b> carbon footprint </b> and <b> packaging type </b>. Carbon footprint represents the amount of carbon dioxide
@@ -68,8 +68,8 @@
                       The following image shows a closer look at both these columns: <br> <br>
                       <img class="image-text" src="img/eco.png" alt=""> <br> <br>
                       We notice that the carbon footprint column has a large number of NaN values. Unfortunately, our analysis has shown that
-                      this feature has only 344 values out of all of the products, meaning that it cannot be very helpful. On the other hand, the packaging
-                      type is present for more than 140,000 products. Thus, the eco-friendliness topic will be mainly based on the packaging type. <br> <br>
+                      this feature has only 342 values out of all of the products, meaning that it cannot be very helpful. On the other hand, the packaging
+                      type is present for more than 130,000 products. Thus, the eco-friendliness topic will be mainly based on the packaging type. <br> <br>
                       In conclusion for this section, the data exploration and cleaning has shown us that: </p>
                       <p>
                       <ul class="list">
@@ -92,7 +92,7 @@
                     <hr class="star-primary">
                     <p> After an extensive analysis and cleaning of the provided dataset, we dived into the following question:
                     <b> What's on my plate? </b> <br>
-                    In order to do so we analyzed the origin of the products, their eco-friendliness, how "healthy" they are and how likely are they to be organic.
+                    In order to do so we analyzed the origin of the products, their eco-friendliness, how "healthy" they are and the organic label.
                     Our research endavors have resulted in interesting findings that will be discussed in this section. </p>
                 </div>
             </div>
@@ -154,7 +154,7 @@
                      <img src="img/top10.png" style="width:100%">
                    </div>
                    <div class="column">
-                     <img src="img/bottom10.png"alt="Forest" style="width:100%">
+                     <img src="img/bottom10.png"alt="Forest" style="width:105%">
                    </div>
                   </div>
                 </div>
@@ -196,7 +196,7 @@
                 in certain way the lower the score is, the more the product contains healthy ingredients and less unhealthy ingredients.
                 In a sense, this score represents how healthy a product is. Details on how it is calculated is shown in [3]. <br>
                 In the aim of computing how "healthy" our plate is, we have computed the average nutrition score per country.
-                As stated earlier, since the French and British nutrition score are very similar (93.3%, same number of products), we have
+                As stated earlier, since the French and British nutrition score are very similar (92.8%, same number of products), we have
                 arbitrarily decided to only use the British score as a reference. However, the French nutrition score could have also been used.
                 A map of the result is shown below, keeping in mind that the higher the score is, the <b> less healthy</b> it becomes: </p>
 
